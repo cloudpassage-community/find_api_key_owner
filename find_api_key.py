@@ -31,6 +31,8 @@ def find_api_key_owner(session):
             if key['key'] == look_for_me:
                 print "Owner group is name = {0}, groupID = {1} \n group_path = {2}".format(group['name'], group['id'], group['group_path'])
                 break
+    #if you got here, no match found
+    print "No Owner group found, please check your other accounts"
 
 if __name__ == "__main__":
     api_session = None
